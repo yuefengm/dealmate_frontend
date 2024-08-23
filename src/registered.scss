@@ -1,0 +1,249 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+//home 
+.Registered{
+  display: none;
+}
+.Registered.active {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registered-container {
+  height: 70%;
+  width:1100px;
+  margin-top: 75px;
+  background: linear-gradient(180deg, rgb(19, 37, 59), rgb(35, 41, 61));
+    border: 1px solid rgb(43, 42, 42);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 1px 100px 10px;
+  animation-name: regicon;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+  animation-delay: .1s;
+  opacity: 0;
+}
+
+.registered-container h2 {
+  color: white;
+  font-size: 400%;
+  padding: 0;
+  margin: 0;
+  animation-name: checkh2;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+  animation-delay: .35s;
+  opacity: 0;
+  
+}
+
+.registered-container img {
+  height: 300px;
+  width: 350px;
+  animation-name: check;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+  animation-delay: .5s;
+  opacity: 0;
+}
+
+.registered-container p {
+  color: white;
+  font-size: 200%;
+  padding: 0;
+  margin: 0;
+  animation-name: checkp;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+  animation-delay: .35s;
+  opacity: 0;
+}
+
+.regiFadeOut.deActivate {
+  animation-name: regFadeOut;
+  animation-fill-mode: forwards;
+  animation-duration: .15s;
+  animation-delay: 0s;
+}
+
+.X {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+
+
+.X .bar {
+  height: 2px;
+  width: 100%;
+  background: lightgrey;
+}
+
+.X .bar:nth-child(1) {
+  transform: translateY(1px) rotate(45deg);
+}
+
+.X .bar:nth-child(2) {
+  transform: translateY(-0.5px) rotate(-45deg);
+}
+
+@keyframes regicon {
+  from {
+     
+     opacity: 0;
+  } to {
+    
+    opacity: 1;
+  }
+}
+
+@keyframes check {
+  from {
+     scale: 0.5;
+     rotate: -90deg;
+     opacity: 0;
+  } to {
+    scale: 1;
+    rotate: 0deg;
+    opacity: 1;
+  }
+}
+@keyframes checkh2 {
+  from {
+    transform: translateY(-20px);
+     opacity: 0;
+  } to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes checkp {
+  from {
+    transform: translateY(220px);
+     opacity: 0;
+  } to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes regFadeOut {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 950px) {
+.registered-container {
+  width: 90%;
+  height: 80%;
+}
+
+.registered-container h2 {
+  font-size: 150%;
+}
+
+.registered-container img {
+  height: 200px;
+  width: 250px;
+}
+.registered-container p {
+  font-size: 110%;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+}
+
+@font-face {
+  font-family: LS;
+  src: url(./components/assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: monu;
+  src: url(./components/assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: GLIN;
+  src: url(./components/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: ITC;
+  src: url(./components/assets/fonts/ITCFranklinGothicStd-Med.otf);
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(./components/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: TT;
+  src: url(./components/assets/fonts/TT-Firs-Neue-Trial-Regular.ttf);
+}
+

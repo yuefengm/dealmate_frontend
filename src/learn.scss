@@ -1,0 +1,499 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+//home 
+.Learn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 20vh;
+  padding-left: 115px;
+  padding-right: 115px;
+  position: relative;
+  background: black;
+}
+
+.Learn::-webkit-scrollbar {
+  width: 0px; /* For vertical scrollbar */
+  height: 0px; /* For horizontal scrollbar */
+  display: none;
+}
+
+.Learn::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.Learn::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.Navbar {
+  //background: linear-gradient(rgba(46, 46, 46, .756), rgba(2, 8, 15, .441));
+  background: black;
+  height: 10%;
+  left: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid white;
+}
+
+.Navbar .navTitle {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 75px;
+}
+
+.Navbar .nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.Navbar .nav-items a {
+  color: white;
+  text-decoration: none;
+  font-family: GLIN;
+  font-weight: 500;
+  font-size: 175%;
+  width: auto;
+  transition: .2s;
+}
+
+#learnCTA {
+  color: #0886d6;
+}
+
+.Navbar .nav-items a:hover {
+  color: #00d8ff;
+}
+
+.Navbar .nav-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  width: 150px;
+  background: linear-gradient(132deg, #0886d6, #001f56);
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 12px;
+  cursor: pointer;
+  transition: .05s;
+}
+
+.nav-login:hover{
+  scale: 1.1;
+}
+
+.nav-login:active {
+  scale: 1.2;
+  filter: saturate(1.5);
+}
+
+.Navbar .nav-login img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: white;
+}
+
+.Navbar .nav-login p {
+ color: white; 
+ margin-left: 10px;
+ font-family: ITC;
+}
+
+.Navbar .logo {
+  height: 45px;
+  margin-right: 5px;
+  width: 47px;
+}
+
+.Navbar .name {
+  color: #fff;
+  text-decoration: none;
+  font-family: monu;
+  font-size: 50px;
+  margin-top: 10px;
+  font-stretch: extra-expanded;
+  font-weight: 100;
+  letter-spacing: 0;
+  margin-left: 5px;
+}
+
+.Navbar .hamburger {
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  height: 30px;
+  justify-content: space-between;
+  width: 40px;
+}
+
+.Navbar .bar {
+  background: #fff;
+  border-radius: 5px;
+  height: 20%;
+  transition: .2s;
+  width: 100%;
+}
+
+.learn-content {
+  width: 100%;
+}
+.learn-content .learn-text-sec1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.learn-content .learn-text-sec1 h2 {
+  color: white;
+  font-family: monu;
+  font-size: 320%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.learn-content .learn-text-sec1 p:nth-child(2) {
+  color: white;
+  font-family: GLIN;
+  font-size: 175%;
+  margin: 0;
+  padding: 0;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+
+.Learn .learn-text-sec1 .learn-create-acc{
+  
+  height: 50px;
+  width: 200px;
+  margin-top: 40px;
+  background: linear-gradient(270deg, #2898de, #0a43a5);
+  border-radius: 25px 25px 25px 25px;
+  //padding-left: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .075s;
+}
+
+.learn-create-acc:hover {
+  scale: 1.1;
+
+}
+.learn-create-acc:active {
+  scale: 1.2;
+  filter: saturate(1.5)
+}
+.Learn .learn-text-sec1 .learn-create-acc p {
+  color: white; 
+  //margin-left: 10px;
+  font-size: 110%;
+  font-weight: 1000;
+  letter-spacing: 0;
+  font-family: quicksand;
+  height: auto;
+  width: auto;
+  text-align: center;
+}
+.Learn .learn-text-sec2-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.learn-text-sec2-wrap h2{
+  color: white;
+  font-family: monu;
+  font-size: 150%;
+}
+
+.learn-text-sec2-wrap p {
+  color: white;
+  font-size: 190%;
+  font-family: GLIN;
+}
+
+.sub-sect1 {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.sub-sect2 {
+  width: 45%;
+  margin-top: 50px;
+
+}
+
+.sub-sect3 {
+  width:30%;
+  margin-top: 50px;
+  transform: translateY(-100px); 
+}
+
+.sub-sect4 {
+  width: 65%;
+  margin-top: 75px;
+
+}
+
+.sub-text-sec2 {
+  margin-top: 75px;
+  padding-left: 23%;
+}
+
+
+.sub-sect5 {
+  width: 40%;
+  margin-top: 0px;
+
+}
+.sub-sect6 {
+  width: 50%;
+  margin-top: 0px;
+}
+
+.sub-sect7{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+}
+
+
+.Learn .learn-text-sec2-wrap .sub-sect7 .learn-create-acc{
+  
+  height: 50px;
+  width: 200px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: linear-gradient(270deg, #2898de, #0a43a5);
+  border-radius: 25px 25px 25px 25px;
+  //padding-left: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .075s;
+  align-self: center;
+}
+
+.learn-create-acc:hover {
+  scale: 1.1;
+
+}
+.learn-create-acc:active {
+  scale: 1.2;
+  filter: saturate(1.5)
+}
+
+.Learn .learn-text-sec2-wrap .sub-sect7 .learn-create-acc p {
+  color: white; 
+  //margin-left: 10px;
+  font-size: 110%;
+  font-weight: 1000;
+  letter-spacing: 0;
+  font-family: quicksand;
+  height: auto;
+  width: auto;
+  text-align: center;
+}
+@media (max-width: 950px) {
+  .Navbar .navTitle {
+    margin-left: 15px !important;
+  }
+  .Navbar .logo {
+    height: 25px !important;
+    width: 27px !important;
+  }
+  .Navbar .name {
+    font-size: 25px !important;
+  }
+  .Navbar .nav-login {
+    height: 35px !important;
+    width: 90px !important;
+  }
+
+  .Navbar .nav-login img{
+    height: 25px !important;
+    width: 25px !important;
+  }
+  .Navbar .nav-signout {
+    height: 35px !important;
+    width: 110px !important;
+    margin-left: 0 !important;
+  }
+
+  .Navbar .nav-signout img{
+    height: 25px !important;
+    width: 25px !important;
+  }
+
+  .Navbar .nav-signout p{
+    font-size: 85% !important;
+  }
+  .Learn {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .learn-content .learn-text-sec1 h2 {
+    font-size: 150%;
+    text-align: center;
+  }
+  .learn-content .learn-text-sec1 p:nth-child(2) {
+    font-size: 115%;
+    text-align: left;
+    width: 80%;
+  }
+
+  .Learn .learn-text-sec2-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learn-text-sec2-wrap h2 {
+    font-size: 115%;
+    text-align: center;
+  }
+
+  .learn-text-sec2-wrap p {
+    font-size: 125%;
+  }
+
+  .sub-sect1 {
+    width: 80%;
+  }
+  .sub-sect2 {
+    width: 80%;
+  }
+
+  .sub-sect3 {
+    width: 80%;
+    transform: translateY(0px);
+  }
+
+
+.sub-sect3 img {
+  width: 100%;
+}
+
+.sub-sect4 {
+  width: 80%;
+}
+
+.sub-text-sec2 {
+ width: 100%;
+ padding: 0;
+}
+
+.sub-sect5 {
+  margin-top: 55px;
+  width: 80%;
+}  
+.sub-sect6 {
+  margin-top: 55px;
+  width: 80%;
+}  
+}
+
+@font-face {
+  font-family: LS;
+  src: url(./components/assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: monu;
+  src: url(./components/assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: GLIN;
+  src: url(./components/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: ITC;
+  src: url(./components/assets/fonts/ITCFranklinGothicStd-Med.otf);
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(./components/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+

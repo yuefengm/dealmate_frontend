@@ -1,0 +1,268 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+//home 
+
+.Login {
+  display: none;
+}
+.Login.active {
+  background: rgba(60, 60, 60, 0.468);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation-name: loginFade;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.Login h2 {
+  font-size: 250%;
+  color: white;
+  color: white;
+  font-family: monu;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.Login form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60%;
+  width: 450px;
+  background: black;
+  border-radius: 15px;
+  position: absolute;
+  animation-name: loginSlide;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+
+.Login form .input-item {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: none;
+  border-bottom: 1px solid rgb(75, 75, 75);
+  margin-top: 0px;
+}
+.Login form label {
+  color: white;
+  font-family: TT;
+  font-size: 115%;
+  margin-top: 15px;
+}
+
+.Login form input {
+  background: black;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 0px 50px 15px 0px;
+  color: rgb(184, 184, 184);
+  font-size: 125%;
+  margin-top: 0;
+}
+
+.Login form button {
+  height: 50px;
+  width: 200px;
+  background: linear-gradient(270deg, #2898de, #0a43a5);
+  color: white; 
+  //margin-left: 10px;
+  font-size: 125%;
+  font-weight: 1000;
+  letter-spacing: 0;
+  font-family: quicksand;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  //padding-left: 12px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.Login form input:-webkit-autofill,
+.Login form input:-webkit-autofill:hover,
+.Login form input:-webkit-autofill:focus,
+.Login form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: rgb(184, 184, 184) !important;
+  border: 1px solid black !important;
+  border-radius: 4px;
+  transition: background-color 5000s ease-in-out 0s; /* This prevents the background color from changing */
+}
+
+
+.Login form input:focus {
+  outline: none;
+}
+
+.X {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+
+
+.X .bar {
+  height: 2px;
+  width: 100%;
+  background: lightgrey;
+}
+
+.X .bar:nth-child(1) {
+  transform: translateY(1px) rotate(45deg);
+}
+
+.X .bar:nth-child(2) {
+  transform: translateY(-0.5px) rotate(-45deg);
+}
+
+
+.logframe.deActive {
+  animation-name: frameFade;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.logframe.deActive form {
+  animation-name: frameSlide;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.logerror{
+  color: rgb(252, 97, 97);
+  font-size: 115%;
+  width: 70%;
+  text-align: center;
+}
+.logerror.active {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .Login form {
+    width: 90%;
+    height: 70%;
+  }
+}
+
+@keyframes loginFade {
+  from {
+    background: rgba(60, 60, 60, 0);
+    } to {
+    background: rgba(60, 60, 60, 0.568);  }
+}
+
+@keyframes loginSlide {
+  from {
+    bottom: -95%;
+  } to {
+    bottom: 10%;  }
+}
+
+@keyframes frameFade {
+  from {
+    background: rgba(60, 60, 60, 0.568);
+    } to {
+    background: rgba(60, 60, 60, 0);  }
+}
+
+@keyframes frameSlide {
+  from {
+    bottom: 5%;
+  } to {
+    bottom: -95%;  }
+}
+
+@font-face {
+  font-family: LS;
+  src: url(./components/assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: monu;
+  src: url(./components/assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: GLIN;
+  src: url(./components/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: ITC;
+  src: url(./components/assets/fonts/ITCFranklinGothicStd-Med.otf);
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(./components/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}

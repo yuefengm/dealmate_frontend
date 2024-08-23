@@ -1,0 +1,360 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+//home 
+.Create-Account {
+  display: none;
+}
+.Create-Account.active {
+  background: rgba(60, 60, 60, 0.468);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: createFade;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.create-acc-content {
+  width: 450px;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: black;
+  border-radius: 15px;
+  position: absolute;
+  animation-name: createSlide;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.create-acc-content h2 {
+  color: white;
+  font-family: monu;
+  font-size: 200%;
+  font-weight: 100;
+  margin-top: 80px;
+}
+.create-acc-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  width: 70%;
+}
+
+.create-acc-content form .input-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid rgb(75, 75, 75);
+  margin-top: 0px;
+}
+
+.create-acc-content form label {
+  color: white;
+  font-family: TT;
+  font-size: 115%;
+  margin-top: 50px;
+}
+
+.create-acc-content form input {
+  background: black;
+  border: none;
+  width: 100%;
+  height: 50px;
+  //border-radius: 0px 50px 15px 0px;
+  color: rgb(184, 184, 184);
+  font-size: 125%;
+  margin-top: 0;
+}
+
+.create-acc-content form button {
+  height: 50px;
+  width: 200px;
+  background: linear-gradient(270deg, #2898de, #0a43a5);
+  color: white; 
+  //margin-left: 10px;
+  font-size: 125%;
+  font-weight: 1000;
+  letter-spacing: 0;
+  font-family: quicksand;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  //padding-left: 12px;
+  cursor: pointer;
+  margin-top: 55px;
+}
+
+.create-acc-content form input:-webkit-autofill,
+.create-acc-content form input:-webkit-autofill:hover,
+.create-acc-content form input:-webkit-autofill:focus,
+.create-acc-content form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: rgb(184, 184, 184) !important;
+  border: 1px solid black !important;
+  border-radius: 4px;
+  transition: background-color 5000s ease-in-out 0s; /* This prevents the background color from changing */
+}
+
+
+
+.create-acc-content form select {
+  background: black;
+  border: none;
+  width: 100%;
+  height: 52px;
+  //border-radius: 0px 50px 15px 0px;
+  color: rgb(184, 184, 184);
+  font-size: 115%;
+
+}
+
+.create-acc-content form input:focus {
+  outline: none;
+}
+
+.create-acc-content form select:focus {
+  outline: none;
+}
+
+.create-acc-content form .select-account-type {
+  width:100%;
+  height: 210px; 
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.create-acc-content form .select-account-type h5 {
+  color: white;
+  margin: 0;
+  padding: none;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 115%;
+}
+
+.create-acc-content form .select-account-type .account-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+
+.create-acc-content form .select-account-type .account-type button {
+  background: linear-gradient(132deg, #0886d6, #001f56);
+  height: 125px;
+  width: 170px;
+  border-radius: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: .1s;
+}
+
+.create-acc-content form .select-account-type .account-type button h3 {
+  font-family: quicksand;
+  color: #00d8ff;
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+
+.create-acc-content form .select-account-type .account-type button img {
+  height: 60px;
+  width: 100px;
+  background: grey;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.create-acc-content form .select-account-type .account-type button:active {
+  scale: 1.1;
+}
+.X {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+
+
+.X .bar {
+  height: 2px;
+  width: 100%;
+  background: lightgrey;
+}
+
+.X .bar:nth-child(1) {
+  transform: translateY(1px) rotate(45deg);
+}
+
+.X .bar:nth-child(2) {
+  transform: translateY(-0.5px) rotate(-45deg);
+}
+
+.regframe.deActive {
+  animation-name: frameFade;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.regframe.deActive .create-acc-content {
+  animation-name: frameSlide;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.regerror{
+  color: rgb(252, 97, 97);
+  font-size: 115%;
+  width: 70%;
+  text-align: center;
+}
+.regerror.active {
+  display: none;
+}
+@keyframes createFade {
+  from {
+    background: rgba(60, 60, 60, 0);
+    } to {
+    background: rgba(60, 60, 60, 0.568);  }
+}
+
+@keyframes createSlide {
+  from {
+    bottom: -95%;
+  } to {
+    bottom: 5%;  }
+}
+
+@keyframes frameFade {
+  from {
+    background: rgba(60, 60, 60, 0.568);
+    } to {
+    background: rgba(60, 60, 60, 0);  }
+}
+
+@keyframes frameSlide {
+  from {
+    bottom: 5%;
+  } to {
+    bottom: -95%;  }
+}
+
+@media (max-width: 950px) {
+.create-acc-content {
+  width: 90%;
+  height:80%;
+}
+.create-acc-content h2 {
+  font-size: 165%;
+  margin-top: 40px;
+
+}
+
+.create-acc-content form label {
+  margin-top: 20px;
+}
+  
+}
+
+@font-face {
+  font-family: LS;
+  src: url(./components/assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: monu;
+  src: url(./components/assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: GLIN;
+  src: url(./components/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: ITC;
+  src: url(./components/assets/fonts/ITCFranklinGothicStd-Med.otf);
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(./components/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: TT;
+  src: url(./components/assets/fonts/TT-Firs-Neue-Trial-Regular.ttf);
+}
+

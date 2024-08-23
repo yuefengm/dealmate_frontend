@@ -1,0 +1,257 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  //background: black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+  width: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+//swiper
+
+.Swiper-Main {
+  background: rgb(189, 189, 189);
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+// swiper
+  .Phone-Nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(251, 251, 248);
+  }
+
+  .Phone-Nav div {
+    height: 35px;
+    width: 35px;
+    background: grey;
+    cursor: pointer;
+  }
+  .Phone-Nav div:nth-child(2) {
+    margin-left: 15px;
+  }
+  .Phone-Nav div:nth-child(4) {
+    margin-right: 15px;
+  }
+  .Phone-Nav img {
+    background: lightblue;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-25px);
+
+  }
+
+  .Swiper-Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .prop-container{ 
+    background-color: rgb(251, 251, 248);
+    border-radius: 10px;
+    border: 3px solid royalblue;
+    position: relative;
+    width: 80%;
+    height: 72%;
+    margin-bottom: 7.5%;
+  }
+  .dm-logo {
+    position: absolute;
+    top: -40px;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: black;
+    height: 60px;
+    width: 60px;
+  }
+  .prop-pictures {
+    height: 73%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .info-section {
+    height: 27%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .prop-location {
+    text-align: center;
+    color: royalblue;
+    font-size: 125%;
+    letter-spacing: .2;
+  }
+  .prop-price {
+    text-align: center;
+    color: rgb(33, 197, 33);
+    font-weight: 700;
+    font-size: 150%;
+  }
+  .sub-info {
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .prop-status {
+    width: 40%;
+    padding-right: 15px;
+    text-align: right;
+    color: royalblue;
+    font-weight: 500;
+    font-size: 100%;
+  }
+  .sub-info div:nth-child(2) {
+    width: 60%;
+    padding-left: 5px;
+  }
+
+  .prop-brief-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .prop-brief-details p {
+    font-size: 85%;
+  }
+  .like-button {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background-color: rgb(99, 129, 222);
+    border: none;
+    position: absolute;
+    right: 14px;
+    bottom: -23px;
+    cursor: pointer;
+  }
+  .like-button .bar {
+    background-color: white;
+    height: 10%;
+  }
+  .like-button .bar:nth-child(1) {
+    transform: translate(1px, 6px) rotate(50deg);
+    
+    width: 50%;
+  }
+  .like-button .bar:nth-child(2) {
+    transform: translate(7px, -1px) rotate(-50deg);
+    width: 75%;
+  }
+  .dislike-button {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background-color: red;
+    border: none;
+    position: absolute;
+    left: 14px;
+    bottom: -23px;
+    cursor: pointer;
+  }
+  .dislike-button .bar {
+    background-color: white;
+    height: 10%;
+  }
+  .dislike-button .bar:nth-child(1) {
+    transform: translate(2px, 2px) rotate(-45deg);
+    
+    width: 85%;
+  }
+  .dislike-button .bar:nth-child(2) {
+    transform: translate(2px, -2px) rotate(45deg);
+    width: 85%;
+  }
+  button {
+    transition: .1s;
+  }
+  button:hover {
+    scale: 1.2;
+  }
+  button:active {
+    filter: saturate(.5);
+    scale: 1.3;
+
+  }
+  
+}
+
+@font-face {
+  font-family: LS;
+  src: url(./components/assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: monu;
+  src: url(./components/assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: GLIN;
+  src: url(./components/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: ITC;
+  src: url(./components/assets/fonts/ITCFranklinGothicStd-Med.otf);
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(./components/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}

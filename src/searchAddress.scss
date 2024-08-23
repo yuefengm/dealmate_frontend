@@ -1,0 +1,278 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+//home 
+.SearchAddress {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  //margin-top: 10vh;
+  padding-left: 115px;
+  padding-right: 115px;
+  position: relative;
+  background: grey;
+  overflow-x: hidden;
+}
+
+
+.Navbar {
+  //background: linear-gradient(rgba(46, 46, 46, .756), rgba(2, 8, 15, .441));
+  background: black;
+  height: 10vh;
+  left: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid white;
+}
+
+.Navbar .navTitle {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 75px;
+}
+
+.Navbar .nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.Navbar .nav-items a {
+  color: white;
+  text-decoration: none;
+  font-family: GLIN;
+  font-weight: 500;
+  font-size: 175%;
+  width: auto;
+  transition: .2s;
+}
+
+.Navbar .nav-items a:hover {
+  color: #00d8ff;
+}
+
+.Navbar .nav-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  width: 150px;
+  background: linear-gradient(132deg, #0886d6, #001f56);
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 12px;
+  cursor: pointer;
+  transition: .05s;
+}
+
+.nav-login:hover{
+  scale: 1.1;
+}
+
+.nav-login:active {
+  scale: 1.2;
+  filter: saturate(1.5);
+}
+
+.Navbar .nav-login img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: white;
+}
+
+.Navbar .nav-login p {
+ color: white; 
+ margin-left: 10px;
+ font-family: ITC;
+}
+
+.Navbar .logo {
+  height: 45px;
+  margin-right: 5px;
+  width: 47px;
+}
+
+.Navbar .name {
+  color: #fff;
+  text-decoration: none;
+  font-family: monu;
+  font-size: 50px;
+  margin-top: 10px;
+  font-stretch: extra-expanded;
+  font-weight: 100;
+  letter-spacing: 0;
+  margin-left: 5px;
+}
+
+.Navbar .hamburger {
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  height: 30px;
+  justify-content: space-between;
+  width: 40px;
+}
+
+.Navbar .bar {
+  background: #fff;
+  border-radius: 5px;
+  height: 20%;
+  transition: .2s;
+  width: 100%;
+}
+
+.SearchAddress h1 {
+  color: white;
+}
+
+.SearchAddress p {
+  color: white;
+}
+
+
+
+.address-results {
+  overflow-y: scroll;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 90vh;
+  background: black;
+  //padding-top: 25px;
+  //padding-bottom: 10px;
+  padding-right: 45px
+}
+
+.buffer {
+  width: 25%;
+  height: 20px;
+  position: fixed;
+  left: 1%;
+  background: black;
+}
+
+.buffer:nth-child(1) {
+  top: 10vh;
+  //border-bottom: 1px solid grey;
+}
+
+.buffer:nth-child(3) {
+  bottom: 0;
+  //border-top: 1px solid grey;
+  
+}
+
+.address-results li {
+ border-top: 1px solid grey;
+ padding: none;
+ margin: 0;
+ padding: 10px;
+font-size: 80%;
+cursor: pointer;
+}
+
+.address-results ul::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+  width: 0;
+}
+.address-results::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+  width: 0;
+}
+@media (max-width: 950px) {
+
+  
+}
+
+@font-face {
+  font-family: LS;
+  src: url(./components/assets/fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: monu;
+  src: url(./components/assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: GLIN;
+  src: url(./components/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: ITC;
+  src: url(./components/assets/fonts/ITCFranklinGothicStd-Med.otf);
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(./components/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: TT;
+  src: url(./components/assets/fonts/TT-Firs-Neue-Trial-Regular.ttf);
+}
+
